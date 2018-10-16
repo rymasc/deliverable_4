@@ -1,0 +1,22 @@
+% !TEX root = main.tex
+\section{Proposal} % (fold)
+\label{sec:proposal}
+
+Our goal is to build a system that helps developers understand how their program and the environment effect the operation run time of their device.
+The purpose of this system is to enable developers to make informed decisions to increase the longevity of their devices run time.
+By creating a tool to provide this information we can later feed this information back to a system like Flicker \cite{flicker} to facilitate dynamic run time changes based on energy harvesting conditions.
+Feeding this information to a dynamic system like Flicker is the end goal, however it is too ambitious to complete in a semester project.
+To accomplish this goal we need to quantify the energy harvesting rate as well as the energy usage of their application.
+
+To quantify energy harvesting rates we will build a device that measures energy harvesting systems for solar, vibration, RF, and thermal energies.
+Our goal is to measure as many harvesting systems as possible, though for time constraints we will start with solar and vibration.
+The system will determine the amount harvested as well as if it will support applications.
+In addition, it will be able to recommend which particular form of energy harvesting would be best based on the environment.
+
+Given the time constraint, we will measure the energy usage of applications only using a static code analysis tool written with ANTLR \cite{antlr}.
+In the future we would like to implement a run time analysis component.
+We will write two to three applications of varying complexity and determine their energy use with static code analysis.
+The first application will be the simplest.
+It will only take a sensor reading and save it in FRAM.
+The next application will add the ability to send data via the radio.
+Depending on time constraints we may add additional applications that either run a simple computation or send data at higher frequency rates.

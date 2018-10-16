@@ -1,0 +1,17 @@
+% !TEX root = main.tex
+\section{Introduction} % (fold)
+\label{sec:introduction}
+
+The vision of the Internet of Things still hasn't come to fruition.
+Batteries are one of the largest obstacles to the Internet of Things \cite{intermittentAndAwesome}
+These batteries can be removed and power can instead be harvested from the environment.
+However, designing and implementing a batteryless device is not trivial.
+One of the biggest challenges associated with implementing a batteryless device is understanding the ever changing energy harvesting environment.
+
+Different tasks use a variable amount of energy depending on the environmental conditions.
+In addition the effectiveness of energy harvesting varies wildly as well.
+Eon \cite{eon} is an energy aware coordination language that is task based.
+It also includes a runtime system that can adapt what tasks run based on the allowed energy.
+Ekho \cite{ekho} discovered that the amount of energy harvested depends on what the device is doing at run time.
+Ekho provides a way to accurately measure energy but does not give the developer feedback on how their actual program effects the harvesting and runtime of the device.
+DewDrop \cite{dewdrop} is a system that powers itself via RFID and also adapts tasks based on the amount of energy available.
