@@ -6,19 +6,21 @@ This section details our plan for completing this project. It details what parts
 
 \subsection{Completed Goals}
 
-Designed and submitted a batteryless board for use with the MSP430 to OSHPark.
-  - Include Figure with board image
-Wrote Simple Sensor Code.
-Wrote Simple Radio Code.
-Wrote Simple MSP-MSP Direct Line Communication Code.
-Using Simeon's more complicated UFOP Board in the interim.
-Wrote Basic ANTLR Grammar for coordination Language.
-Created Basic ANTLR Framework.
-
+We have designed and submitted a batteryless board for use with the MSP430 to OSHPark, see Figure XXX.
+It hasn't arrived yet, but should soon.
+In the interim we have been using a more complicated batteryless UFOP board designed by Simeon.
+Two simple MSP430 C programs have been written simple sensor reading and simple radio rx/tx.
+Since we noticed that everyone was having difficulty with the nRF24L01+ radio we decided to use the cc1101 radio instead.
+In addition, we wrote simple code to communicate the task completed to another MSP430.
+Two MSP430's are connected via digital pins with the batteryless devices pins set as outputs and the battery powered devices pins set as inputs.
+A simple tag grammar for task identification has been written for ANTLR.
+Tags will have the following format {\tt |< Task n >|} and |</ Task n >|.
+In addition, a simple java program has been written to parse inputted code.
+ANTLR works using event handlers that fire when the parser reaches certain code, such as a function definition.
 
 \subsection{In Progress Goals}
 
-Assemble batteryless board when it comes in from OSHPark, should come in soon.
+Once the boards arrive from OSHPark we will assemble them.
 Testing out different solar panel lighting conditions
 Send data from MSP to computer for plotting.
 Plotting code.
@@ -28,11 +30,18 @@ More examples
 This model can then be used in combination with the ANTLR compiler to estimate energy usage by the batteryless system.
 
 \subsection{Work Distribution}
-Siddhant
-Plotting of Expirations, Task and flow completion
-Lavaniyaa
+
+This section details how the work will be distributed between group members.
+
+\subsubsection{Siddhant}
+Siddhant is going to work on getting serial communication from the battery powered MSP and the PC.
+Once that channel is working he will use it to send the task and flow completion rates as well as data expirations.
+This data will then be used to make the graph referenced EARLIER.
+
+\subsubsection{Lavaniyaa}
 Create more MSP Examples to run
-Ryan
+\subsubsection{Ryan}
+Ryan will work on do
 Finishing up of ANTLR Task and Flow Identification
 
 
