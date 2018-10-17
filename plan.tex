@@ -40,9 +40,10 @@ Finishing up of ANTLR Task and Flow Identification
 \subsection{Completed Goals}
 
 We have designed and submitted a batteryless board for use with the MSP430 to OSHPark, see Figure XXX.
+We have to thank Simeon for providing us with the main file and a board to use in the interim.
+The board we have submitted is a simpler version which removes UFOP, since it adds unnecessary complication to this project.
 It hasn't arrived yet, but should soon.
-In the interim we have been using a more complicated batteryless UFOP board designed by Simeon.
-Two simple MSP430 C programs have been written simple sensor reading and simple radio rx/tx.
+Two simple MSP430 C programs have been written simple sensor reading and simple radio RX/TX.
 Since we noticed that everyone was having difficulty with the nRF24L01+ radio we decided to use the cc1101 radio instead.
 In addition, we wrote simple code to communicate the task completed to another MSP430.
 Two MSP430's are connected via digital pins with the batteryless devices pins set as outputs and the battery powered devices pins set as inputs.
@@ -71,13 +72,10 @@ This project is predicated on giving developers feedback so if we cannot send da
 One potential alternative would be to save this data to an SD card instead so it can then later be read.
 An additional alternative feature to add would be to use an RGB LED to indicate which power level the system is in - low power, intermittent or reliable.
 
-\subsection{Techniques from others}
-
-A huge shout to Simeon whose previous design eased our task to work our way through the boards for harvesting energy.
-We made a few changes to the design which he had to make it useful to our needs.
-
 \subsection{Final Semester Goals}
-The final goal of this project is to have multiple energy harvesting systems and applications built.
-We plan on having a minimum of two harvesting systems - solar and vibration with two applications each.
-We will build our battery based tool that can connect to an energy harvesting system and batteryless device to profile its performance.
-The system will be evaluated by comparing the system estimated lifetime with the actual lifetime of the device in a programmable environment, similar to how it was done in Ekho.
+The final goal of this project is to have a system capable of "energy debugging" a batteryless system that uses code annotated with our task and flow language.
+This debugger will be able to communicate which tasks are being completed and which are not for a given IV curve.
+....
+....
+....
+The system will allow the deveevaluated by comparing the system estimated lifetime with the actual lifetime of the device in a programmable environment, similar to how it was done in Ekho.
