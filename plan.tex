@@ -43,8 +43,7 @@ We have designed and submitted a batteryless board for use with the MSP430 to OS
 We have to thank Simeon for providing us with the main file and a board to use in the interim.
 The board we have submitted is a simpler version which removes UFOP, since it adds unnecessary complication to this project.
 It hasn't arrived yet, but should soon.
-Two simple MSP430 C programs have been written simple sensor reading and simple radio RX/TX.
-Since we noticed that everyone was having difficulty with the nRF24L01+ radio we decided to use the cc1101 radio instead.
+A simple MSP430 C program have been written for simple sensor reading.
 In addition, we wrote simple code to communicate the task completed to another MSP430.
 Two MSP430's are connected via digital pins with the batteryless devices pins set as outputs and the battery powered devices pins set as inputs.
 A simple tag grammar for task identification has been written for ANTLR.
@@ -54,7 +53,8 @@ ANTLR works using event handlers that fire when the parser reaches certain code,
 
 \subsection{In Progress Goals}
 
-
+A MSP430 program for simple radio RX/TX is under progress.
+Since we noticed that everyone was having difficulty with the nRF24L01+ radio we decided to use the cc1101 radio instead.
 Once the boards arrive from OSHPark we will assemble them.
 The ANTLR event handlers need to be implemented so that the C code can be properly injected.
 We also plan to build the script for ANTLR and gcc to get them to work as one compiler.
