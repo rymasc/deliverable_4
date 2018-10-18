@@ -13,10 +13,17 @@ In addition a brief timeline is included.
  Data expirations, task and flow completion rate with respect to power level.
  Note the three areas of activity - none, intermittent and reliable.
 }
-\label{f:graph}
+\label{f:circuit}
 \end{figure}
 
-
+\begin{figure}[!ht] %[tbp]
+\centering
+\includegraphics[width=1.0\linewidth]{Figures/circuit.jpg}
+\caption{
+Basic Batteryless Shield for solar powered launchpad.
+}
+\label{f:graph}
+\end{figure}
 
 \subsection{Work Distribution}
 
@@ -34,12 +41,12 @@ She is working on writing C code for the batteryless applications.
 She will also be helping Siddhant to setup the serial communication.
 
 \subsubsection{Ryan}
-Ryan's focus on this project is working with ANTLR to build
-Finishing up of ANTLR Task and Flow Identification
+Ryan's focus on this project is working with ANTLR to build the translator that will insert the appropriate communication code for each task.
+In addition, the ANTLR program must be able to identify flows
 
 \subsection{Completed Goals}
 
-We have designed and submitted a batteryless board for use with the MSP430 to OSHPark, see Figure XXX.
+We have designed and submitted a batteryless board for use with the MSP430 to OSHPark, see Figure \ref{f:circuit}.
 We have to thank Simeon for providing us with the main file and a board to use in the interim.
 The board we have submitted is a simpler version which removes UFOP, since it adds unnecessary complication to this project.
 It hasn't arrived yet, but should soon.
@@ -57,12 +64,12 @@ ANTLR works using event handlers that fire when the parser reaches certain code,
 
 Once the boards arrive from OSHPark we will assemble them.
 The ANTLR event handlers need to be implemented so that the C code can be properly injected.
-We also plan to build the script for ANTLR and gcc to get them to work as one compiler.
+We also plan to build a ruby script for ANTLR and GCC to get them to work as one compiler.
 The data shall be transferred from MSP to the computer for plotting.
 We shall write scripts in R to plot the charts from the data.
 Once we verify that the system is working under stable power we will need to test using different solar panels.
 Different lighting conditions shall be tested for the solar panels.
-Specifically we will ramp up the lighting with the aim of collecting task and flow execution rates as well as data expirations for each of the three power level zones documented in Figure \ref{graph}.
+Specifically we will ramp up the lighting with the aim of collecting task and flow execution rates as well as data expirations for each of the three power level zones documented in Figure \ref{f:graph}.
 
 
 \subsection{Risks and Unknowns}
@@ -74,8 +81,5 @@ An additional alternative feature to add would be to use an RGB LED to indicate 
 
 \subsection{Final Semester Goals}
 The final goal of this project is to have a system capable of "energy debugging" a batteryless system that uses code annotated with our task and flow language.
-This debugger will be able to communicate which tasks are being completed and which are not for a given IV curve.
-....
-....
-....
-The system will allow the deveevaluated by comparing the system estimated lifetime with the actual lifetime of the device in a programmable environment, similar to how it was done in Ekho.
+This debugger will be able to communicate which tasks and flows are being completed and which are not for a given IV curve.
+In addition to a bigger picture graph such as the one in Figure \ref{f:graph}, the debugger will give the developer feedback on the level of completion for the program being ran currently.
